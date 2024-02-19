@@ -1,0 +1,64 @@
+.logo {
+    font-weight: bolder;
+    font-size: 20px;
+    margin-left: 50px;
+}
+.nav-menu {
+    display: none;
+}
+.todo_span {
+    color: #93C572;
+    display: block;
+    margin-left: 0px;
+    margin-top: -10px;
+}
+
+.logo_name {
+    color: #FA8072;
+    position: absolute;
+    left: 8%;
+    top: 14%;
+}
+
+.show-icon {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .logo {
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+
+    .logo_name {
+        left: 13%;
+        top: 0%;
+    }
+    .show-icon {
+        display: block;
+        margin-left: auto;
+    }
+
+    .nav-menu {
+        display: block;
+    }
+
+    .nav-menu img {
+        width: 24px;
+        margin-right: 10px;
+    }
+    
+    .nav-menu h6 {
+        margin-top: 30px;
+        cursor: pointer;
+    }
+    
+    h6 span {
+        color: #36454F;
+        font-weight: bold;
+    }
+    
+    h6 span:hover {
+        color: #C0C0C0;
+    }
+}

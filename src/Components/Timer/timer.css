@@ -1,0 +1,68 @@
+.timer-container {
+    width: 266px;
+    height: 100%;
+    position: fixed;
+    left: 90%;
+    top: 10.5%;
+    transform: translateX(-50%);
+    bottom: 0; /* Position at the bottom */
+    text-align: center;
+    padding-top: 60px;
+    display: block;
+    transition: all 2s ease-in-out;
+    background-color: white;
+    box-shadow: 0px 1px 3px rgba(167, 167, 167, 0.5);
+}
+
+.time {
+    width: 120px;
+    height: 120px;
+    padding: 40px 20px 20px 20px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.time span {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.time-action {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.time-action div {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.time-action button {
+    outline: none;
+    border: 1px solid #FA8072;
+    padding: 5px;
+    background-color: #FA8072;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+/* Responsive styles for screens up to 768px width */
+@media screen and (max-width: 768px) {
+    .timer-container {
+        width: 80%;
+       height: 370px;
+       padding-top: 10px;
+       padding-bottom: 10px;
+        position: relative;
+        margin-left: -160px;
+        margin-top: 40px;
+        background-color: white;
+        box-shadow: 0px 2px 3px  rgba(167, 167, 167, 0.5);
+    }
+}

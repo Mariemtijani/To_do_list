@@ -1,0 +1,53 @@
+.todo-container {
+    background-color: white;
+    color: #28282B;
+    width: 800px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.todo-container li:hover {
+    background-color: #E5E4E2;
+}
+
+.todo-container li {
+    width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    .todo-container {
+        width: 350px;
+        max-width: 400px; /* Adjust the maximum width for smaller screens */
+        margin-left: 10px; /* Add margin for better spacing on smaller screens */
+        margin-right: 10px; /* Add margin for better spacing on smaller screens */
+    }
+}
+
+.todoNumber {
+    color: #D3D3D3;
+    font-size: 10px;
+    border: #D3D3D3 solid 1px;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 8px;
+}
+
+.iconDiv span {
+    display: inline-block;
+    margin: 0px 10px 0px 5px;
+    cursor: pointer;
+    color: #D3D3D3;
+}
+
+.iconDiv span:hover {
+    color: #FA8072;
+}
+
+.taskText span {
+    display: block;
+}
