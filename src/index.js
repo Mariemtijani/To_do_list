@@ -14,7 +14,7 @@ const store = createStore(ReducerTask)
 root.render(
 
   
-  <BrowserRouter>
+  <BrowserRouter basename='/To_do_list'>
     <Provider store={store}>
        <App />
     </Provider>
