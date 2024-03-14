@@ -18,6 +18,9 @@ export default function Form() {
   // no completed tasks
   const notCompleted = allTasks.filter((task) => task.completed == false)
 
+  
+
+
   // declare the dispatch to use the actions
   const dispatch = useDispatch();
 
@@ -26,11 +29,17 @@ export default function Form() {
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [day, setDay] = useState('Today');
 
-
-  useEffect(() => {
+//date variable
     const today = dayjs();
     const tomorrow = today.add(1, 'day');
     const next7Days = today.add(7, 'day');
+
+    // no completed tasks for today
+  const notCompletedToday = notCompleted.filter(task => task.date === 'Today');
+  console.log(notCompletedToday)
+
+  useEffect(() => {
+    
 
     if (dayjs(selectedDate).isSame(today, 'day')) {
       setDay('Today');
@@ -210,9 +219,9 @@ const [workingTaskId, setWorkingTaskId] = useState(null);
       </div>
 
       <div className="showTasks">
-        {notCompleted.length ? (
+        {notCompletedToday.length ? (
           <>
-            {notCompleted.map((item, ind) => {
+            {notCompletedToday.map((item, ind) => {
               return (
                 <Task
                   key={item.id}

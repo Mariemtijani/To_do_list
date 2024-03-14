@@ -27,10 +27,16 @@ export default function Form() {
   const [day, setDay] = useState('Today');
 
 
-  useEffect(() => {
-    const today = dayjs();
+  const today = dayjs();
     const tomorrow = today.add(1, 'day');
     const next7Days = today.add(7, 'day');
+
+    // no completed tasks for tomorrow
+  const notCompletedTomorrow = notCompleted.filter(task => task.date === 'Tomorrow');
+
+
+  useEffect(() => {
+    
 
     if (dayjs(selectedDate).isSame(today, 'day')) {
       setDay('Today');
@@ -210,9 +216,9 @@ const [workingTaskId, setWorkingTaskId] = useState(null);
       </div>
 
       <div className="showTasks">
-        {notCompleted.length ? (
+        {notCompletedTomorrow.length ? (
           <>
-            {notCompleted.map((item, ind) => {
+            {notCompletedTomorrow.map((item, ind) => {
               return (
                 <Task
                   key={item.id}

@@ -27,6 +27,8 @@ export default function Form() {
   const [day, setDay] = useState('Today');
 
 
+  // no completed tasks for next 7 day
+  const notCompletedThisWeek = notCompleted.filter(task => task.date === 'Next 7 days');
   useEffect(() => {
     const today = dayjs();
     const tomorrow = today.add(1, 'day');
@@ -210,9 +212,9 @@ const [workingTaskId, setWorkingTaskId] = useState(null);
       </div>
 
       <div className="showTasks">
-        {notCompleted.length ? (
+        {notCompletedThisWeek.length ? (
           <>
-            {notCompleted.map((item, ind) => {
+            {notCompletedThisWeek.map((item, ind) => {
               return (
                 <Task
                   key={item.id}
