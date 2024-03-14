@@ -19,7 +19,7 @@ function App() {
     <div>
       <NavElament/>
       <Routes>
-        <Route path="/" element={<Form />}/>
+        <Route path="/To_do_list" element={<Form />}/>
         <Route path="/history" element={<Completed />}/>
         <Route path="/today" element={<Today />}/>
         <Route path="/tomorrow" element={<Tomorrow />}/>
