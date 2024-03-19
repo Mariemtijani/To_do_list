@@ -28,7 +28,7 @@ export default function Side() {
          
         <img src={menu} alt="" className='side_img' onClick={sideToggle} />
     <div className='side_menu'>
-      <Link to='/' style={{ textDecoration: 'none', color: 'inherit' }}> 
+      <Link to='/To_do_list' style={{ textDecoration: 'none', color: 'inherit' }}> 
         <h6>
           <img src={allTasks} alt=""  />
           <span>All Tasks</span>
